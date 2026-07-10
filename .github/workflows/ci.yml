@@ -1,1 +1,18 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:        # runs on PRs too — review with green checks, not vibes
+
+jobs:
+  test:
+    runs-on: ubuntu-latest        # deliberately NOT macOS: if it only works on
+                                  # your laptop, CI is where we find out
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync              # reads uv.lock → byte-identical env to yours
+      - run: uv run ruff check .
+      - run: uv run pytest
 
