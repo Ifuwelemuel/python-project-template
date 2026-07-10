@@ -1,7 +1,7 @@
 [project]
 name = "PROJECT_NAME"
 version = "0.1.0"
-description = " "
+description = "CHANGEME "
 requires-python = ">=3.11"
 
 # Runtime dependencies stay EMPTY today. We add them with `uv add` the moment
