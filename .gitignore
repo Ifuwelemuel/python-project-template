@@ -1,0 +1,17 @@
+# Environments & caches — machine-local, regenerable
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# Data — git tracks what humans write, not what pipelines produce
+data/
+
+# Experiment tracking artifacts (Phase 3 — MLflow writes here)
+mlruns/
+
+# Notebook noise
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
