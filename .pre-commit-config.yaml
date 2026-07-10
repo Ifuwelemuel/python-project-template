@@ -1,1 +1,15 @@
 
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.4
+    hooks:
+      - id: ruff            # linter: catches real bugs (unused imports, mutable defaults)
+        args: [--fix]       # auto-fix the trivial ones instead of just complaining
+      - id: ruff-format     # formatter: ends all style debates by having none
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files   # blocks any file >500 kB from being committed
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
